@@ -1,5 +1,13 @@
-import api from "./api/axiosInstance";
+import { slots } from "../data/slots";
 
-export const getAvailableSlots = (doctorId) => {
-    return api.get(`/availability/${doctorId}`);
-};
+export function getAvailableSlots(doctorId) {
+  console.log("Doctor:", doctorId);
+
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve({
+        data: slots,
+      });
+    }, 1000);
+  });
+}
