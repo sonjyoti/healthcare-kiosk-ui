@@ -1,11 +1,4 @@
-import {
-  HeartPulse,
-  Bone,
-  Brain,
-  Eye,
-  Baby,
-  Stethoscope,
-} from "lucide-react";
+import { HeartPulse, Bone, Brain, Eye, Baby, Stethoscope } from "lucide-react";
 
 export const departments = [
   {

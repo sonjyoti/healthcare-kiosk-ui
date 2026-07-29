@@ -1,5 +1,13 @@
-import api from "./api/axiosInstance";
+import { doctors } from "../data/doctors";
 
-export const getRecommendations = (payload) => {
-    return api.post("/recommendations", payload);
-};
+export function getRecommendations(payload) {
+  console.log("Recommendation Request:", payload);
+
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve({
+        data: doctors,
+      });
+    }, 1000);
+  });
+}
